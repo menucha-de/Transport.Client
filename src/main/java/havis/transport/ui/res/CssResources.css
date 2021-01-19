@@ -1,0 +1,13 @@
+@CHARSET "UTF-8";
+
+.label {
+	font-weight: bold;
+}
+
+@sprite .clickButton {
+	gwt-image: "clickButton";
+	border: 0;
+	margin-left: 1em;
+	width: 31px;
+	height: 31px;
+}

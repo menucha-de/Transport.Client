@@ -1,0 +1,42 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+	xmlns:g="urn:import:com.google.gwt.user.client.ui" xmlns:shared="urn:import:havis.net.ui.shared.client.widgets">
+	<ui:with type="havis.net.ui.shared.resourcebundle.ResourceBundle"
+		field="res" />
+	<ui:with type="havis.transport.ui.res.AppResources" field="localRes" />
+
+	<ui:style>
+	.text {
+		font-size: 1.5rem;
+		font-weight: bold;
+		margin-top: 0.5em;
+		margin-bottom: 0.8em;
+	}
+	
+	.scriptArea {
+		resize: vertical;
+		width: 47em;
+		max-width: 47em;
+		height: 345px;
+		box-sizing: border-box;
+		border: 1px solid #ccc;
+		border-radius: 1em;
+		box-shadow: inset 1px 3px 5px 0 rgba(204, 204, 204, 0.41);
+		background-color: transparent;
+		padding: 0.35em 0.5em;
+		font-size: 1em;
+		font-family: Trebuchet MS;
+	}
+	</ui:style>
+
+	<shared:CommonEditorDialog buttonCaption="Apply"
+		ui:field="dialog">
+		<g:FlowPanel ui:field="fp_header">
+			<g:Label ui:field="lbl_title" stylePrimaryName="{res.css.webuiEditorTitle}"
+				addStyleNames="{style.text}" />
+		</g:FlowPanel>
+		<g:SimplePanel ui:field="sp_editor" stylePrimaryName="{res.css.webuiEditorPanel}">
+			<g:TextArea ui:field="ta_script" stylePrimaryName="{style.scriptArea}" />
+		</g:SimplePanel>
+	</shared:CommonEditorDialog>
+</ui:UiBinder> 

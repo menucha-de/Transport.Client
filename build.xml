@@ -1,0 +1,32 @@
+<?xml version="1.0"?>
+<project name="havis.transport-client" default="publish" xmlns:ivy="antlib:org.apache.ivy.ant" xmlns:if="ant:if">
+
+	<property file="${basedir}/build.properties" />
+
+	<import>
+		<url url="${ivy.url}/ant/default.xml" />
+	</import>
+
+	<target name="clean-cache">
+		<clean-cache />
+	</target>
+
+	<target name="clean-all">
+		<clean-all />
+	</target>
+
+	<target name="compile">
+		<compile dst="${build.dir.classes}">
+			<src path="${src.main.dir}" />
+		</compile>
+	</target>
+
+	<target name="jar" depends="compile">
+		<jar-bin />
+	</target>
+
+	<target name="publish" depends="jar">
+		<publish jar="false" app="false" />
+	</target>
+
+</project>

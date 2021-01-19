@@ -1,0 +1,20 @@
+Bundle-Name: Ha-VIS Custom Transport UI App
+Bundle-SymbolicName: havis.transport-client
+Bundle-Version: 2.6.1
+Application-Name: Transport UI
+Implementation-Version: 2.6
+Bundle-ManifestVersion: 2
+Bundle-Vendor: HARTING IT_SD
+Havis-Bundle: 
+ /OSGI-INF/havis.transport-client.properties
+Bundle-Activator: havis.transport.osgi.Activator
+Import-Package: 
+ com.fasterxml.jackson.databind,
+ havis.net.rest.shared.data,
+ javax.ws.rs,
+ javax.ws.rs.core,
+ javax.ws.rs.ext,
+ org.osgi;resolution:=optional,
+ org.osgi.framework;resolution:=optional,
+ org.osgi.util.tracker;resolution:=optional
+

@@ -1,0 +1,31 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+	xmlns:g="urn:import:com.google.gwt.user.client.ui" xmlns:shared="urn:import:havis.net.ui.shared.client.widgets">
+	<ui:with type="havis.net.ui.shared.resourcebundle.ResourceBundle"
+		field="res" />
+	<ui:with type="havis.transport.ui.res.AppResources" field="localRes" />
+
+	<ui:style>
+	.textArea {
+		resize: none;
+		background-color: inherit;
+		width: 273px;
+		height: 22px;
+		border: none;
+		font-size: 1em;
+		overflow: hidden;
+		padding-left: 4px;
+		cursor: pointer;
+	}
+	.adjustForBox{
+		display: inline-block;
+		vertical-align: middle;
+	}
+	</ui:style>
+
+	<g:HTMLPanel visible="false">
+		<g:TextArea ui:field="script" readOnly="true"
+			stylePrimaryName="{style.textArea}" addStyleNames="{style.adjustForBox}"/>
+		<g:Label ui:field="clickButton" stylePrimaryName="{localRes.css.clickButton}" addStyleNames="{style.adjustForBox}"/>
+	</g:HTMLPanel>
+</ui:UiBinder> 
