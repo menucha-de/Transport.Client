@@ -4,7 +4,7 @@ Bundle-Version: 2.7.0
 Application-Name: Transport UI
 Implementation-Version: 2.7
 Bundle-ManifestVersion: 2
-Bundle-Vendor: HARTING IT_SD
+Bundle-Vendor: Menucha Team <info@menucha.de>
 Havis-Bundle: 
  /OSGI-INF/havis.transport-client.properties
 Bundle-Activator: havis.transport.osgi.Activator
